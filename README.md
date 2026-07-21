@@ -1,5 +1,11 @@
 # Transforming Detective - macOS Installation
 
+## Project Status
+
+**Version**: 0.14 (v014)  
+**Status**: ✅ Playable  
+**Platform**: macOS (Intel & Apple Silicon via Rosetta 2)
+
 ## Running the Game
 
 Double-click `Game.app` to launch. If you encounter issues, follow the troubleshooting steps below.
@@ -99,3 +105,11 @@ This application is built with NW.js (Node WebKit). The permission issues occur 
 
 - macOS 10.13 or later
 - x86_64 architecture (Intel Mac or Apple Silicon with Rosetta 2)
+
+## License
+
+This project is proprietary software. All rights reserved.
+
+The game assets, code, and documentation are the intellectual property of the original creators. Redistribution, modification, or commercial use without explicit permission is prohibited.
+
+For licensing inquiries, please contact the project maintainers.
