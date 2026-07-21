@@ -4,6 +4,55 @@
 
 Double-click `Game.app` to launch. If you encounter issues, follow the troubleshooting steps below.
 
+## Building from Source
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v14 or later)
+- [NW.js SDK](https://nwjs.io/) (v0.65.0 or compatible version)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Build Steps
+
+1. **Install dependencies**:
+   ```bash
+   yarn install
+   ```
+
+2. **Run in development mode**:
+   ```bash
+   # Using NW.js directly
+   /path/to/nwjs .
+   ```
+
+3. **Package for distribution**:
+   ```bash
+   # Install nw-builder globally
+   yarn global add nw-builder
+
+   # Build for macOS
+   nwbuild -p osx64 -o dist/ .
+   ```
+
+4. **Fix permissions on the built app** (required for macOS):
+   ```bash
+   chmod +x dist/Game/osx64/Game.app/Contents/MacOS/*
+   chmod +x dist/Game/osx64/Game.app/Contents/Versions/*/nwjs\ Framework.framework/Helpers/*
+   ```
+
+### Project Structure
+
+```
+.
+├── Game.app/              # Packaged macOS application
+│   └── Contents/
+│       ├── MacOS/         # Main executable (nwjs)
+│       ├── Resources/     # App resources and game assets
+│       └── Versions/      # NW.js framework and helpers
+├── package.json           # NW.js manifest and dependencies
+└── README.md
+```
+
 ## Troubleshooting
 
 ### "Permission denied" error
